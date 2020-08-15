@@ -1,0 +1,3 @@
+lokasi kernel linux = /boot
+file yang terkait dan kegunaannya
+

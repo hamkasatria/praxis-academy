@@ -1,0 +1,41 @@
+zeon@Latitude:/boot$ cd ~
+zeon@Latitude:~$ l
+Desktop/  Documents/  Downloads/  Music/  Pictures/  Public/  snap/  Templates/  Videos/
+zeon@Latitude:~$ cd Documents/
+zeon@Latitude:~/Documents$ cd Boothcamp/praxis-academy/
+zeon@Latitude:~/Documents/Boothcamp/praxis-academy$ ls -al
+total 20
+drwxrwxr-x 2 zeon zeon 4096 Agu 14 18:33 .
+drwxrwxr-x 3 zeon zeon 4096 Agu 14 17:46 ..
+-rw-rw-r-- 1 zeon zeon  228 Agu 14 18:29 env.txt
+-rw-rw-r-- 1 zeon zeon   75 Agu 14 17:50 grub.txt
+-rw-rw-r-- 1 zeon zeon 1024 Agu 14 18:33 .kernel-linux.txt.swp
+zeon@Latitude:~/Documents/Boothcamp/praxis-academy$ touch cmdline.txt
+zeon@Latitude:~/Documents/Boothcamp/praxis-academy$ cd ..
+zeon@Latitude:~/Documents/Boothcamp$ cd ..
+zeon@Latitude:~/Documents$ mkdir dirbaru
+zeon@Latitude:~/Documents$ l
+Boothcamp/  dirbaru/
+zeon@Latitude:~/Documents$ rmdir -r dirbaru/
+rmdir: invalid option -- 'r'
+Try 'rmdir --help' for more information.
+zeon@Latitude:~/Documents$ rm -r dirbaru/
+zeon@Latitude:~/Documents$ nano Boothcamp/praxis-academy/
+cmdline.txt            env.txt                grub.txt               .kernel-linux.txt.swp  
+zeon@Latitude:~/Documents$ cat Boothcamp/praxis-academy/env.txt 
+display manager yang digunakan adalah lightDM
+$cat /etc/X11/default-display-manager
+/usr/sbin/lightdm
+
+window manager yang digunakan
+
+
+desktop environment yang digunakan adalah mate dengan command berikut
+$ls /usr/bin/*session
+
+zeon@Latitude:~/Documents$ cd Boothcamp/
+zeon@Latitude:~/Documents/Boothcamp$ touch coba.txt
+zeon@Latitude:~/Documents/Boothcamp$ mv coba.txt ~/Desktop/
+zeon@Latitude:~/Documents/Boothcamp$ cd ~/Desktop/
+zeon@Latitude:~/Desktop$ l
+coba.txt
