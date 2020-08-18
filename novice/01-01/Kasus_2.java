@@ -4,40 +4,43 @@ public class Kasus_2{
     public static void main(String [] args)
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.perintln("masukkan panjang matrik");
-        int x = Integer.parseInt(Scanner.nextLine());
+        System.out.println("masukkan panjang matrik");
+        int x = Integer.parseInt(scanner.nextLine());
 
-        System.out.perintln("masukkan panjang matrik");
-        int y = Integer.parseInt(Scanner.nextLine());
+        System.out.println("masukkan panjang matrik");
+        int y = Integer.parseInt(scanner.nextLine());
 
 
-        int[][] matrik1;
-        int[][] matrik2;
+        int[][] matrik1 = new int[x][y];
+        int[][] matrik2 = new int[x][y];
         for(int i = 0 ;i<x;i++)
         {
             for(int j = 0 ;j<y;j++)
             {
-                System.out.perintln("masukkan matrik 1 "+i+j);
-                matrik1[i][j] = Integer.parseInt(Scanner.nextLine());
-            }      
+                System.out.println("masukkan matrik 1 - "+i+j);
+                matrik1[i][j] = Integer.parseInt(scanner.nextLine());
+            }  
+            System.out.println("");    
         }
 
         for(int i = 0 ;i<x;i++)
         {
             for(int j = 0 ;j<y;j++)
             {
-                System.out.perintln("masukkan matrik 2 "+i+j);
-                matrik2[i][j] = Integer.parseInt(Scanner.nextLine());
-            }      
+                System.out.println("masukkan matrik 2 - "+i+j);
+                matrik2[i][j] = Integer.parseInt(scanner.nextLine());
+            } 
+            System.out.println("");     
         }
-        System.out.perintln("hasilnya adalah = ");
+        System.out.println("hasilnya adalah = ");
         for(int i = 0 ;i<x;i++)
         {
             for(int j = 0 ;j<y;j++)
             {
                 
-                System.out.println(matrik1[i][j] + matrik2[i][j]);
-            }      
+                System.out.print(matrik1[i][j] + matrik2[i][j]);
+            }   
+            System.out.println("");   
         }
 
     }
