@@ -1,7 +1,7 @@
 // contoh coding yang menerpakan variabel, function, operator
 
 public class Variabel{
-    public void age()
+    public void Age()
     {
         int usia = 0;
         usia = usia + 7;
@@ -9,7 +9,7 @@ public class Variabel{
 
     }
  
-public static void main (String [] arg){
+public static void main (String [] args){
     Variabel test = new Variabel(); //untuk menjalanan testnya
     test.age();
  }
