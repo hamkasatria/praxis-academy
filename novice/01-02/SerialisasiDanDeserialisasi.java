@@ -1,5 +1,11 @@
 import java.io.*;
 
+// import java.io.FileInputStream;
+// import java.io.FileOutputStream;
+// import java.io.ObjectInputStream;
+// import java.io.ObjectOutputStream;
+// import java.io.Serializable;
+
 public class SerialisasiDanDeserialisasi{
     public static void main(String [] args)
     {   //membuat objek dari demo
@@ -21,33 +27,37 @@ public class SerialisasiDanDeserialisasi{
 
             System.out.println("Serialisasi berhasil");
         }
-        catch(IOException ex){
+        catch(Exception ex){
             System.out.println("IO exception is caught ");
         }
 
         //Desentraisasi
         Demo object1 = null;
         try {
-            FileInputStream file = new FileInputStream (filename);
+
+            FileInputStream file = new FileInputStream(filename);
             ObjectInputStream in = new ObjectInputStream(file);
 
-            object1 = (Demo)in.readObject;
+            object1 = (Demo)in.readObject();
 
             in.close();
             file.close();
 
             System.out.println("telah di desentralisasi");
             System.out.println("nama = "+ object1.nama);
-            System.out.println("nomor = "+ object1.nama);
+            System.out.println("nomor = "+ object1.nomor);
 
-        } catch (IOException ex) {
+
+
+        } 
+        catch (IOException ex) {
             //TODO: handle exception
             System.out.println("IOException is caught");
          }
-        //catch (ClassNotFoundException ex)
-        // {
-        //     System.out.println("ClassNotFoundException is caught");
-        // }
+        catch (ClassNotFoundException ex)
+        {
+            System.out.println("ClassNotFoundException is caught");
+        }
     }
 }
 
