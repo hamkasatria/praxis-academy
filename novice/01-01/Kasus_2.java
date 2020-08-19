@@ -5,8 +5,11 @@ public class Kasus_2{
     {
         Scanner scanner = new Scanner(System.in);
         System.out.println("masukkan panjang matrik");
-        int x = Integer.parseInt(scanner.nextLine());
-
+        String m = scanner.nextLine();
+        
+        int x = Integer.parseInt(m);
+        System.out.println(x);
+        
         System.out.println("masukkan panjang matrik");
         int y = Integer.parseInt(scanner.nextLine());
 
@@ -20,7 +23,7 @@ public class Kasus_2{
                 System.out.println("masukkan matrik 1 - "+i+j);
                 matrik1[i][j] = Integer.parseInt(scanner.nextLine());
             }  
-            System.out.println("");    
+//            System.out.println("");    
         }
 
         for(int i = 0 ;i<x;i++)
@@ -30,7 +33,7 @@ public class Kasus_2{
                 System.out.println("masukkan matrik 2 - "+i+j);
                 matrik2[i][j] = Integer.parseInt(scanner.nextLine());
             } 
-            System.out.println("");     
+//            System.out.println("");     
         }
         System.out.println("hasilnya adalah = ");
         for(int i = 0 ;i<x;i++)
