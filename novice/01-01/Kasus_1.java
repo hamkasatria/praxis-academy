@@ -30,7 +30,7 @@ public class Kasus_1{
             for(int j = 0 ;j<2;j++)
             {   
                 
-                System.out.print(mmatrik2[i][j]+"\t");
+                System.out.print(matrik2[i][j]+"\t");
                 
             }
             System.out.println("");
