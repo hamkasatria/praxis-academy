@@ -52,7 +52,7 @@ public class Kasus_1{
         mahasiswa1.put("nim","567890876");
 
         System.out.println(mahasiswa1);
-
+        System.out.println(mahasiswa1);
 
 
     }
