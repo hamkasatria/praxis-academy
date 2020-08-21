@@ -1,0 +1,83 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Kasus_1<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Kasus_1",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Kasus_2<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Kasus_2",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Kondisi<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Kondisi",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Loop<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Loop",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Main<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Main",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-StringArray<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.StringArray",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Switch<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Switch",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Test",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Variabel<01-01_41f9e1ae>",
+            "request": "launch",
+            "mainClass": "Latihan_4.Variabel",
+            "projectName": "01-01_41f9e1ae"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test",
+            "request": "launch",
+            "mainClass": "Test"
+        }
+    ]
+}
