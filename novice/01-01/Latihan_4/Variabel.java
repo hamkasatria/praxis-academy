@@ -1,3 +1,5 @@
+package Latihan_4;
+
 // contoh coding yang menerpakan variabel, function, operator
 
 public class Variabel{
@@ -11,7 +13,7 @@ public class Variabel{
  
 public static void main (String [] args){
     Variabel test = new Variabel(); //untuk menjalanan testnya
-    test.age();
+    test.Age();
  }
 
 

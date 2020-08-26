@@ -1,13 +1,21 @@
-import javax.xml.parser.*;
-import javax.xml.transform.*;
-import org.w3c.dom.*;
 import java.io.File;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Attr;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 
 public class CreateXmlFileDemo{
     public static void main(String[] args) {
         try {
             //membaut dockumen dengan favtory>buider>new document
-            DocumentBuilderFactory dbRactory = 
+            DocumentBuilderFactory dbFactory = 
             DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
             Document doc = dBuilder.newDocument();
@@ -16,18 +24,14 @@ public class CreateXmlFileDemo{
             Element rootElement = doc.createElement("cars");
             doc.appendChild(rootElement);
 
-            //supercars element
-            Element supercacr = doc.createElement("cars");
-            doc.appendChild(rootElement);
-
             //supercar element
             Element supercar = doc.createElement("supercars");
             rootElement.appendChild(supercar);
 
             //setting attribute to element
-            Attr attr = doc.appendChild("company");
+            Attr attr = doc.createAttribute("company");
             attr.setValue("Ferrari");
-            supercar.serAttributeNode(attr);
+            supercar.setAttributeNode(attr);
 
             //carname element
             Element carname = doc.createElement("carname");

@@ -1,3 +1,4 @@
+package Latihan_4;
 public class Loop
 {
     public static void main(String[] args){

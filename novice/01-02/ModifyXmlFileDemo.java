@@ -1,15 +1,32 @@
+import java.io.File;
+
+import javax.lang.model.element.Element;
+import javax.swing.text.Document;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+
 //memodifikasi file input.xml
+
 
 public class ModifyXmlFileDemo{
     public static void main(String[] args) {
         
         try {
             File inputFile = new File("input.xml");
-            DocumentBuilderactory docFactory = DocumentBuilderfactory.newInstance();
+            DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse(inputFile);
-            Node cars = doc.getFirstChild();
-            Node supercar = doc.getElementsByTagName("supercars").item(0);
+            Document doc = (Document) docBuilder.parse(inputFile);
+            Node cars = ((Node) doc).getFirstChild();
+            
+            Node supercar = ((org.w3c.dom.Document) doc).getElementsByTagName("supercars").item(0);
 
             //update supercar atribute
             NamedNodeMap attr = supercar.getAttributes();
