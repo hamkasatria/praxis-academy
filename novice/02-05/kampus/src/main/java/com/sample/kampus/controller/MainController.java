@@ -30,36 +30,39 @@ public class MainController {
     //get, post, get all, get id, post, update
 
     
-    @PostMapping(path="/post")
+    @PostMapping(path="/")
     public BioMahasiswa addBioMahasiswa(@RequestBody BioMahasiswa bioMahasiswa){
         return myResource.save(bioMahasiswa);
     }
-    @GetMapping(path="/get_all")//menampilkan iterasi
+
+    @GetMapping(path="/")//menampilkan iterasi
     public java.util.List<BioMahasiswa> get_all() {
         return myResource.findAll();
     }
 
-    @GetMapping(path="/get_nim/{nim}")//tipe bio mahasiswaa
+    @GetMapping(path="/{nim}")//tipe bio mahasiswaa
     public Optional<BioMahasiswa> nimBioMahasiswa(@PathVariable String nim){
         return myResource.findById(nim);
     }
     
-    @DeleteMapping(path="/delete/{nim}")//tidak menampilkan apapun
+    @DeleteMapping(path="/{nim}")//tidak menampilkan apapun
     void deleteBioMahasiswa(@PathVariable String nim){
         myResource.deleteById(nim);
     }
 
-    @PutMapping(path="/update/{nim}")//tipe biomahasisa
+    @PutMapping(path="/{nim}")//tipe biomahasisa
     public BioMahasiswa replaceBioMahasiswa(@RequestBody BioMahasiswa newbioMahasiswa, @PathVariable String nim){
         return myResource.findById(nim)
         .map(bioMahasiswa->{
             bioMahasiswa.setNama(newbioMahasiswa.getNama());
             bioMahasiswa.setNim(newbioMahasiswa.getNim());
             return myResource.save(bioMahasiswa);
-        }).orElseGet(()->{
+        })
+        .orElseGet(()->{
             newbioMahasiswa.setNim(nim);
-            return myResource.save(newbioMahasiswa);
-        });
+           return myResource.save(newbioMahasiswa);
+        })
+        ;
         
     }
 
